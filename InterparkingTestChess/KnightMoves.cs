@@ -23,6 +23,9 @@ namespace InterparkingTestChess
         /// </summary>
         public static List<(int row, int col)> GetAllowDestinations(int row, int col)
         {
+            if (!IsInRange(row)) throw new ArgumentOutOfRangeException(nameof(row));
+            if (!IsInRange(col)) throw new ArgumentOutOfRangeException(nameof(col));
+
             var allowedDestinations = new List<(int, int)>();
             var deltas = new List<(int, int)> { (2, 1), (1, 2) };
             var signs = new List<int> { -1, 1 };

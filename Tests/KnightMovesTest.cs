@@ -1,6 +1,7 @@
 using FluentAssertions;
 using InterparkingTestChess;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 
 using MoveList = System.Collections.Generic.List<(int, int)>;
@@ -64,6 +65,21 @@ namespace Tests
             {
                 (4,1), new MoveList { (2,0), (2,2), (3,3), (5,3), (6,2), (6,0) }
             };
+        }
+
+        [TestMethod]
+        [DataRow(-1,-1)]
+        [DataRow(-1,4)]
+        [DataRow(-1,9)]
+        [DataRow(3,-1)]
+        [DataRow(3,8)]
+        [DataRow(9,2)]
+        [DataRow(9,-3)]
+        public void ItThrowsArgumentOutOfRangeException(int row, int col)
+        {
+            Action gettingTheMoves = () => KnightMoves.GetAllowDestinations(row, col);
+
+            gettingTheMoves.Should().Throw<ArgumentOutOfRangeException>();
         }
     }
 }
