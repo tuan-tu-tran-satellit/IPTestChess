@@ -19,7 +19,7 @@ namespace InterparkingTestChess
          */
         /// <summary>
         /// Return the list of allowed destinations given a starting point.
-        /// Row and colum numbers are 0 indexed.
+        /// Row and column numbers are 0 indexed.
         /// </summary>
         public static List<(int row, int col)> GetAllowDestinations(int row, int col)
         {
