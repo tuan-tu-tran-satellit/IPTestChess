@@ -55,7 +55,7 @@ namespace Tests
             };
             yield return new object[]
             {
-                (4,7), new MoveList { (2,5), (2,7), (6,7), (6,4), (5,4), (3,4) }
+                (4,6), new MoveList { (2,5), (2,7), (6,7), (6,5), (5,4), (3,4) }
             };
             yield return new object[]
             {
