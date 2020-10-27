@@ -35,7 +35,6 @@ namespace Tests
             yield return new object[]
             {
                 (0,3), new MoveList{ (1,5), (2,4), (2,2), (1,1) }
-
             };
             yield return new object[]
             {
