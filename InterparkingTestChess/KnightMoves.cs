@@ -27,9 +27,9 @@ namespace InterparkingTestChess
             if (!IsInRange(col)) throw new ArgumentOutOfRangeException(nameof(col));
 
             var allowedDestinations = new List<(int, int)>();
+
             var deltas = new List<(int, int)> { (2, 1), (1, 2) };
             var signs = new List<int> { -1, 1 };
-
             foreach (var (deltaRow, deltaColumn) in deltas)
             {
                 foreach (var signDeltaRow in signs)
